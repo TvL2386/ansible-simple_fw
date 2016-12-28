@@ -1,0 +1,23 @@
+---
+# defaults file for tvl2386.simple_fw
+simple_fw_rules: |
+  *mangle
+  :PREROUTING ACCEPT [0:0]
+  :INPUT ACCEPT [0:0]
+  :FORWARD ACCEPT [0:0]
+  :OUTPUT ACCEPT [0:0]
+  :POSTROUTING ACCEPT [0:0]
+  COMMIT
+
+  *nat
+  :PREROUTING ACCEPT [0:0]
+  :INPUT ACCEPT [0:0]
+  :OUTPUT ACCEPT [0:0]
+  :POSTROUTING ACCEPT [0:0]
+  COMMIT
+
+  *filter
+  :INPUT ACCEPT [0:0]
+  :FORWARD ACCEPT [0:0]
+  :OUTPUT ACCEPT [0:0]
+  COMMIT

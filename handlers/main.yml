@@ -1,0 +1,4 @@
+---
+# handlers file for tvl2386.simple_fw
+- name: reload simple_fw
+  shell: iptables-restore < /etc/iptables.v4

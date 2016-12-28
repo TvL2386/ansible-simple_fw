@@ -1,0 +1,15 @@
+---
+# tasks file for tvl2386.simple_fw
+- include: distro-check.yml
+
+- name: Install firewall ruleset
+  template:
+    src: iptables.v4.j2
+    dest: /etc/iptables.v4
+    mode: 0644
+    owner: root
+    group: root
+  notify: reload simple_fw
+
+- name: Copy v4 restore script
+  template: src=restore.v4.j2 dest=/etc/network/if-pre-up.d/iptables-v4 owner=root group=root mode=755
