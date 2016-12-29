@@ -1,6 +1,6 @@
-# Ansible tvl2386.simple_fw role
+# Ansible TvL2386.simple_fw role
 
-> `tvl2386.simple_fw` is an [Ansible](http://www.ansible.com) role which:
+> `TvL2386.simple_fw` is an [Ansible](http://www.ansible.com) role which:
 >
 > * manages an iptables ruleset
 
@@ -9,19 +9,19 @@
 Using `ansible-galaxy`:
 
 ```shell
-$ ansible-galaxy install tvl2386.simple_fw
+$ ansible-galaxy install TvL2386.simple_fw
 ```
 
 Using `requirements.yml`:
 
 ```yaml
-- src: tvl2386.simple_fw
+- src: TvL2386.simple_fw
 ```
 
 Using `git`:
 
 ```shell
-$ git clone https://github.com/tvl2386/ansible-simple_fw.git tvl2386.simple_fw
+$ git clone https://github.com/TvL2386/ansible-simple_fw.git TvL2386.simple_fw
 ```
 
 ## Dependencies
@@ -37,7 +37,7 @@ This is an example playbook:
 
 - hosts: all
   roles:
-    - tvl2386.simple_fw
+    - TvL2386.simple_fw
   vars:
     simple_fw_rules: |
       *mangle
